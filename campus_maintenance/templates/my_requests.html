@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<h2>
+My Requests
+</h2>
+
+
+{% for r in requests %}
+
+
+<h3>
+{{r.title}}
+</h3>
+
+
+<p>
+{{r.category}}
+<br>
+
+{{r.priority}}
+
+<br>
+
+{{r.status}}
+
+</p>
+
+
+<a href="/update/{{r.id}}">
+Edit
+</a>
+
+
+<a href="/delete/{{r.id}}">
+Delete
+</a>
+
+
+<hr>
+
+
+{% endfor %}
+
+
+
+{% endblock %}
